@@ -3,11 +3,12 @@ on: [push]
 
 jobs:
   build:
-    runs-on:ubutu-latest
+    runs-on:ubuntu-latest
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
+
       - name: Build Docker Image
-        uses: docker build -t emp_mngmt_app .
+        run: docker build -t emp_mngmt_app .
     
